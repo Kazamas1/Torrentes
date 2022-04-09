@@ -1,0 +1,6 @@
+Cambios en BBDD
+
+Limpiar Fecha y cargar como fecha.
+Añadir total lluvia
+agregado lluvia 10,5 y 3 días
+tiempo última llovida
