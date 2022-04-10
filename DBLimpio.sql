@@ -2,11 +2,16 @@ select
 estacion,
 Fecha,
 LuviaTotal,
-sum(LuviaTotal) over (partition by Estacion order by Fecha rows BETWEEN 2 PRECEDING and current row) as meco
+case when LuviaTotal = 0 then 0
+		when L
 from DA_Baleares_Limpios dbl 
 
+show columns from DA_Baleares_Limpios
 
 
+select DISTINCT Estacion  from DA_Baleares_Limpios 
+
+update DA_Baleares_Limpios  set Estacion = 'Escorca, Lluc' where id = 149
 
 update DA_Baleares_Limpios 
 Set Fecha = cast(SUBSTRING(Fecha, 6,10) as date)
